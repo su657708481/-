@@ -1,0 +1,27 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   gPlainText.java
+
+import granulej.lang.InvokeAgent;
+import java.io.PrintStream;
+
+class g_2418E6D575AFE46C46D7380BC1F90A61 extends g_6B41DFD954DC2D8014CD3244F1C966D5
+{
+
+    public LogItem generate()
+    {
+        if(!InvokeAgent.doFitness("gPlainText"))
+        {
+            return (LogItem)InvokeAgent.replaceMethod(this, "gPlainText", "generate", new Class[0], new Object[0]);
+        } else
+        {
+            System.out.println("safety index is high, not use encrypt");
+            return super.generate();
+        }
+    }
+
+    g_2418E6D575AFE46C46D7380BC1F90A61()
+    {
+    }
+}

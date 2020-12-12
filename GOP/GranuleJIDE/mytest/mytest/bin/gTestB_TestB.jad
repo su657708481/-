@@ -1,0 +1,27 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   gTestB.java
+
+import granulej.lang.InvokeAgent;
+import granulej.lang.ObjectAgent;
+
+class gTestB_TestB extends TestB
+{
+
+    public void actionB()
+    {
+        TestB latestObj = (TestB)ObjectAgent.getLatestObject(this);
+        if(latestObj != this)
+            latestObj.actionB();
+        else
+        if(!InvokeAgent.doFitness("gTestB"))
+            InvokeAgent.replaceVoidMethod(this, "gTestB", "actionB", new Class[0], new Object[0]);
+        else
+            setBX(21);
+    }
+
+    gTestB_TestB()
+    {
+    }
+}

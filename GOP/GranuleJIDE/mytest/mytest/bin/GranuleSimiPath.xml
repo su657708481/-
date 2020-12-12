@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<g-path md5="1A2B09FF0E072F95566C33714B333CCD">
+    <path name="gTestC" value="TestC:s1"/>
+    <path name="gTestA" value="TestA:varA"/>
+    <path name="gTestB" value="TestA:varA,TestB:varB"/>
+</g-path>

@@ -1,0 +1,26 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   gTree3X1.java
+
+import granulej.lang.InvokeAgent;
+import granulej.lang.ObjectAgent;
+
+class g12BEC07DABE284C822540371870CA70D_Tree3X2 extends g273AA564607ECBF53EEDF8B08472CDF0_Tree3X2
+{
+
+    public int get1()
+    {
+        Tree3X1 latestObj = (Tree3X1)ObjectAgent.getLatestObject(this);
+        if(latestObj != this)
+            return Integer.valueOf(latestObj.get1()).intValue();
+        if(!InvokeAgent.doFitness("gTree3X1"))
+            return ((Integer)InvokeAgent.replaceMethod(this, "gTree3X1", "get1", new Class[0], new Object[0])).intValue();
+        else
+            return 200;
+    }
+
+    g12BEC07DABE284C822540371870CA70D_Tree3X2()
+    {
+    }
+}

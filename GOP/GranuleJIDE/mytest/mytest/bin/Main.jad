@@ -1,0 +1,52 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Main.java
+
+import granulej.lang.GopContext;
+import granulej.lang.ObjectAgent;
+import java.io.PrintStream;
+
+class Main
+{
+
+    static void check(String item, int expected, int actual)
+    {
+        if(actual == expected)
+        {
+            System.out.println(item + " PASS");
+            passNum++;
+        } else
+        {
+            System.out.println(item + " FAILED expected: " + expected + " but got " + actual);
+            failedNum++;
+        }
+    }
+
+    public static void main(String args[])
+    {
+        TestA a = (TestA)ObjectAgent.newInstance(gTestA_TestA, new Class[0], new Object[0]);
+        GopContext.modifyContext("varA", String.valueOf(0), "private");
+        a.actionA();
+        check("test", 11, a.getAX());
+        TestB b = (TestB)ObjectAgent.newInstance(g19A9A5EA4307232DC29AEF0ECF96FB80_TestB, new Class[0], new Object[0]);
+        b.actionA();
+        b.actionB();
+        check("test", 11, b.getAX());
+        check("test", 21, b.getBX());
+        System.out.println("PASS : FAILED = " + passNum + " : " + failedNum);
+        S t = new S();
+        t.value = 100;
+        GopContext.modifyContextByObject("s1", t, "private");
+        TestC c = (TestC)ObjectAgent.newInstance(gTestC_TestC, new Class[0], new Object[0]);
+        c.print();
+    }
+
+    Main()
+    {
+    }
+
+    static int passNum = 0;
+    static int failedNum = 0;
+
+}

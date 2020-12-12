@@ -1,0 +1,23 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Tree1X0.java
+
+import granulej.lang.ObjectAgent;
+
+public class Tree1X0
+{
+
+    public int get0()
+    {
+        Tree1X0 latestObj = (Tree1X0)ObjectAgent.getLatestObject(this);
+        if(latestObj != this)
+            return Integer.valueOf(latestObj.get0()).intValue();
+        else
+            return 100;
+    }
+
+    public Tree1X0()
+    {
+    }
+}

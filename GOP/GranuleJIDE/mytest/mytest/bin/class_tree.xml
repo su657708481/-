@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<class granule0="g0" name="Object">
+    <class name="Main"/>
+    <class name="S"/>
+    <class granule0="gTestA" name="TestA" shadow_class0="gTestA_TestA">
+        <class granule0="gTestB" name="TestB" shadow_class0="gTestB_TestB"/>
+    </class>
+    <class granule0="gTestC" name="TestC" shadow_class0="gTestC_TestC"/>
+</class>

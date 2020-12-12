@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<g-tree file="TestGranuleTree.xml" location="D:\GranuleJ\GOP\GranuleJIDE\mytest\mytest\bin\"
+        md5="1A2B09FF0E072F95566C33714B333CCD" poset="&lt;c0,s1&gt;&lt;c0,varA&gt;&lt;varA,varB&gt;"
+        raceId="42D0E1E3CE814B335D0808DAA2A54D92">
+    <granule class="Object" context="c0" name="g0">
+        <granule class="TestC" context="s1" name="gTestC" shadow_class0="gTestC_TestC"/>
+        <granule class="TestA" context="varA" name="gTestA" shadow_class0="gTestA_TestA">
+            <granule class="TestB" context="varB" name="gTestB" shadow_class0="gTestB_TestB"/>
+        </granule>
+    </granule>
+    <ShadowClasses>
+        <method name="actionA()#TestA" shadow0="gTestA_TestA"/>
+        <method name="actionB()#TestB" shadow0="gTestB_TestB"/>
+        <method name="print()#TestC" shadow0="gTestC_TestC"/>
+    </ShadowClasses>
+</g-tree>

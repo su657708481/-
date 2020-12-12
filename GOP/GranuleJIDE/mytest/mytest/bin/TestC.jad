@@ -1,0 +1,24 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   TestC.java
+
+import granulej.lang.ObjectAgent;
+import java.io.PrintStream;
+
+public class TestC
+{
+
+    public TestC()
+    {
+    }
+
+    public void print()
+    {
+        TestC latestObj = (TestC)ObjectAgent.getLatestObject(this);
+        if(latestObj != this)
+            latestObj.print();
+        else
+            System.out.println("TestC");
+    }
+}

@@ -1,0 +1,27 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   gLowOverload.java
+
+import granulej.lang.InvokeAgent;
+import java.io.PrintStream;
+
+class gLowOverload_UsrLogGenerator$gLowOverload_AbstractGenerator$UsrLogGenerator extends gLowOverload_AbstractGenerator.UsrLogGenerator
+{
+
+    public void produceLog()
+    {
+        if(!InvokeAgent.doFitness("gLowOverload"))
+        {
+            InvokeAgent.replaceVoidMethod(this, "gLowOverload", "produceLog", new Class[0], new Object[0]);
+        } else
+        {
+            System.out.println("system overload is low, not use flow control in user log...");
+            super.produceLog();
+        }
+    }
+
+    gLowOverload_UsrLogGenerator$gLowOverload_AbstractGenerator$UsrLogGenerator()
+    {
+    }
+}

@@ -1,0 +1,30 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Main.java
+
+import java.io.PrintStream;
+
+class Main
+{
+
+    public static void main(String args[])
+    {
+        Tree1X0 t = new Tree1X0();
+        int counter = 0;
+        for(int i = 0; i < 0x186a0; i++)
+            counter += t.get0();
+
+        long startTime = System.nanoTime();
+        for(int i = 0; i < 0x186a0; i++)
+            counter += t.get0();
+
+        long endTime = System.nanoTime();
+        System.out.println(endTime - startTime);
+        System.exit(0);
+    }
+
+    Main()
+    {
+    }
+}
